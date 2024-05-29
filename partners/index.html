@@ -5,20 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partners Page</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'KenVector Future';
+            src: url('../assets/fonts/kenvector_future.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'KenVector Future Thin';
+            src: url('../assets/fonts/kenvector_future_thin.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'KenVector Future', sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <div class="content">
-        <button class="back-button" onclick="window.location.href='../index.html'">Назад</button>
-        <div class="balance">Баланс: <span id="balance">0</span> YOUNG</div>
-        <div class="partner">
-            <p>Подпишитесь на <a href="https://t.me/shifucrypto" target="_blank">Shifu Crypto</a></p>
-            <button class="subscribe-button" data-channel="shifucrypto">Подписаться</button>
-        </div>
-        <div class="partner">
-            <p>Подпишитесь на <a href="https://t.me/tailungairdrop" target="_blank">Tailung Airdrop</a></p>
-            <button class="subscribe-button" data-channel="tailungairdrop">Подписаться</button>
+    <div class="back-button">
+        <img src="../assets/images/arrowSilver_left.png" alt="Back" onclick="goBack()">
+    </div>
+    <div class="container">
+        <h2>Our Partners</h2>
+        <div class="partners-list">
+            <div class="partner">
+                <img src="../assets/images/avatar1.png" alt="Partner 1" class="avatar">
+                <p>Partner 1</p>
+            </div>
+            <div class="partner">
+                <img src="../assets/images/avatar2.png" alt="Partner 2" class="avatar">
+                <p>Partner 2</p>
+            </div>
+            <div class="partner">
+                <img src="../assets/images/avatar3.png" alt="Partner 3" class="avatar">
+                <p>Partner 3</p>
+            </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
