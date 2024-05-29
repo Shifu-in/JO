@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var totalMiningRate = miningRates.hour + miningRates.day + miningRates.week;
 
     function updateBalance() {
-        balance += totalMiningRate * 1; // Update every 1 seconds
+        balance += totalMiningRate * 4; // Update every 4 seconds
         balanceElement.textContent = balance.toFixed(8);
         countElement.textContent = balance.toFixed(10);
     }
