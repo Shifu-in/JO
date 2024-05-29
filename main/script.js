@@ -1,15 +1,23 @@
-var balanceElement = document.getElementById("balance");
-var countElement = document.getElementById("count");
+document.addEventListener('DOMContentLoaded', function() {
+    var balanceElement = document.getElementById("balance");
+    var countElement = document.getElementById("count");
 
-var countUpOptions = {
-    separator: " "
-};
+    var balance = 0;
+    var miningRates = {
+        hour: 2 / 3600,  // 2 YNG per hour
+        day: 30 / 86400, // 30 YNG per day
+        week: 280 / 604800 // 280 YNG per week
+    };
 
-var count = new CountUp(countElement, 0.00022793, 0.0101595600, 13, 1, countUpOptions);
+    var totalMiningRate = miningRates.hour + miningRates.day + miningRates.week;
 
-document.getElementById("startButton").addEventListener("click", function() {
-    count.start(function() {
-        var newBalance = parseFloat(balanceElement.textContent) + parseFloat(count.endVal);
-        balanceElement.textContent = newBalance.toFixed(8);
+    function updateBalance() {
+        balance += totalMiningRate * 4; // Update every 4 seconds
+        balanceElement.textContent = balance.toFixed(8);
+        countElement.textContent = balance.toFixed(10);
+    }
+
+    document.getElementById("startButton").addEventListener("click", function() {
+        setInterval(updateBalance, 4000);
     });
 });
