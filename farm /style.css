@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'KenVector Future';
-    src: url('../assets/fonts/kenvector_future.ttf') format('truetype');
+    src: url('farm/assets/fonts/kenvector_future.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'KenVector Future Thin';
-    src: url('../assets/fonts/kenvector_future_thin.ttf') format('truetype');
+    src: url('farm/assets/fonts/kenvector_future_thin.ttf') format('truetype');
 }
 
 html {
@@ -28,7 +28,7 @@ body {
 
 .content {
     text-align: center;
-    background: url('../assets/images/glassPanel.png') no-repeat center center;
+    background: url('farm/assets/images/glassPanel.png') no-repeat center center;
     background-size: cover;
     padding: 20px;
     border-radius: 10px;
@@ -61,7 +61,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-image: url('../assets/images/barHorizontal_blue_left.png');
+    background-image: url('farm/assets/images/barHorizontal_blue_left.png');
     background-size: cover;
 }
 
