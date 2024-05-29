@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'KenVector Future';
+            src: url('../assets/fonts/kenvector_future.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'KenVector Future Thin';
+            src: url('../assets/fonts/kenvector_future_thin.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'KenVector Future', sans-serif;
+        }
+    </style>
 </head>
 <body>
+    <div class="back-button">
+        <img src="../assets/images/arrowSilver_left.png" alt="Back" onclick="goBack()">
+    </div>
     <div class="content">
         <div class="balance-container">
             <div class="name">Balance: <span id="balance">0.00000000</span> btc</div>
@@ -19,5 +37,10 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
