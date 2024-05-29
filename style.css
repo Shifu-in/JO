@@ -89,9 +89,11 @@ nav ul li a:hover {
     background-color: #000;
     border-radius: 6px;
     box-shadow: 0 0 0.5px 1px white;
-    width: 200px;
+    width: 300px;
     height: 100px;
     margin: 20px auto;
+    color: white;
+    font-size: 1.2em;
 }
 
 .start-button {
@@ -107,4 +109,9 @@ nav ul li a:hover {
 
 .start-button:hover {
     background-color: #2980b9;
+}
+
+.name {
+    margin: 10px 0;
+    font-size: 1.2em;
 }
