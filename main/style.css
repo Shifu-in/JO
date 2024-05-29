@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+    font-family: 'KenVector Future';
+    src: url('../assets/fonts/kenvector_future.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'KenVector Future Thin';
+    src: url('../assets/fonts/kenvector_future_thin.ttf') format('truetype');
+}
 
 html {
     height: 100%;
@@ -7,7 +15,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'KenVector Future', sans-serif;
     background-color: #2d2d2d;
     color: white;
     margin: 0;
@@ -53,6 +61,8 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-image: url('../assets/images/barHorizontal_blue_left.png');
+    background-size: cover;
 }
 
 .start-button:hover {
