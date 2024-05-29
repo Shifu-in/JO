@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var balanceElement = document.getElementById("balance");
     var countElement = document.getElementById("count");
+    var daysElement = document.getElementById("daysUntilLaunch");
 
     var balance = 0;
     var miningRates = {
@@ -12,12 +13,21 @@ document.addEventListener('DOMContentLoaded', function() {
     var totalMiningRate = miningRates.hour + miningRates.day + miningRates.week;
 
     function updateBalance() {
-        balance += totalMiningRate * 4; // Update every 4 seconds
+        balance += totalMiningRate * 0.5; // Update every 0.5 seconds
         balanceElement.textContent = balance.toFixed(8);
         countElement.textContent = balance.toFixed(10);
     }
 
+    function updateDaysUntilLaunch() {
+        var days = parseInt(daysElement.textContent, 10);
+        if (days > 0) {
+            days -= 1;
+            daysElement.textContent = days;
+        }
+    }
+
     document.getElementById("startButton").addEventListener("click", function() {
-        setInterval(updateBalance, 4000);
+        setInterval(updateBalance, 500);
+        setInterval(updateDaysUntilLaunch, 86400000); // Update every 24 hours (86400000 ms)
     });
 });
