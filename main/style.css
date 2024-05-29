@@ -1,50 +1,55 @@
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html {
-  height: 100%;
-  display: grid;
-  place-items: center;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
 
 body {
-  font-family: 'Inconsolata', sans-serif;
-  background-color: #111;
-  overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .content {
-  text-align: center;
+    text-align: center;
 }
 
-.name {
-  color: white;
+.balance-container {
+    margin-bottom: 20px;
 }
 
 .tv {
-  text-shadow: 0px 0px 100px #000;
-  display: grid;
-  place-items: center;
-  padding: 5em;
-  background-color: black;
-  border-radius: 6px;
-  box-shadow: 0 0 0.5px 1px white;
-  color: white;
-  width: 200px;
-  height: 0.01px;
+    text-shadow: 0px 0px 100px #000;
+    display: grid;
+    place-items: center;
+    padding: 2em;
+    background-color: black;
+    border-radius: 6px;
+    box-shadow: 0 0 0.5px 1px white;
+    width: 200px;
+    height: 100px;
+    margin: 20px auto;
 }
 
 .start-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  color: white;
-  background-color: #3498db;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .start-button:hover {
-  background-color: #2980b9;
+    background-color: #2980b9;
 }
-
